@@ -58,7 +58,10 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomCenter,
-            colors: [Color.fromRGBO(3, 5, 88, 1), Color.fromRGBO(3, 5, 88, 1)],
+            colors: [
+              Color.fromRGBO(3, 5, 88, 1),
+              Color.fromRGBO(47, 87, 139, 1)
+            ],
           ),
         ),
         child: Center(
