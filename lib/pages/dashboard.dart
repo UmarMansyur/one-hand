@@ -61,6 +61,7 @@ class Dashboard extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.only(right: 21),
                         child: const CircleAvatar(
+                          radius: 34,
                           backgroundImage: NetworkImage(
                               'https://api.unira.ac.id/img/profil/mhs/8e35dc4c9c4b61b341800d1ef1f10eba.jpg'),
                         ),
