@@ -86,12 +86,6 @@ class Dashboard extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {},
-                            child: Text('Berita',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontFamily: 'Lato',
-                                  fontSize: 10,
-                                )),
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8),
@@ -99,6 +93,12 @@ class Dashboard extends StatelessWidget {
                               backgroundColor: Colors.white,
                               minimumSize: const Size(40, 20),
                             ),
+                            child: const Text('Berita',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'Lato',
+                                  fontSize: 10,
+                                )),
                           ),
                         ],
                       ),

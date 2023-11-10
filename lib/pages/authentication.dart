@@ -1,4 +1,3 @@
-import 'package:example_app/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -44,34 +43,101 @@ class Authentication extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 35),
+            padding: const EdgeInsets.symmetric(horizontal: 35),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('NIM', style: TextStyle(fontSize: 14)),
+                const Text(
+                  'NIM',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                ),
                 Container(
-                  padding: EdgeInsets.only(top: 9),
+                  padding: const EdgeInsets.only(top: 9, bottom: 20),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      hintText: 'Masukkan NIM',
-                      hintStyle: TextStyle(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
+                        ),
+                      ),
+                      hintText: 'Masukkan NIM/NIS anda….',
+                      hintStyle: const TextStyle(
                         fontSize: 14,
                         fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(201, 206, 214, 1),
                       ),
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
+                        ),
                       ),
+                      focusColor: const Color.fromRGBO(240, 240, 240, 1),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                          color: Colors.blue,
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
+                const Text(
+                  'Kata Sandi',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(top: 9, bottom: 35),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
+                        ),
+                      ),
+                      hintText: 'PIN/Kata Sandi',
+                      hintStyle: const TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'Lato',
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(201, 206, 214, 1),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                          color: Color.fromRGBO(240, 240, 240, 1),
+                        ),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.visibility,
+                          color: Color.fromRGBO(201, 206, 214, 1),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromRGBO(4, 9, 86, 1),
+                    minimumSize: const Size(double.infinity, 55),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text('Masuk'),
+                ),
               ],
             ),
           )
