@@ -9,25 +9,16 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SafeArea(
-          child: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromRGBO(47, 87, 139, 1),
-                  Color.fromRGBO(3, 5, 88, 1)
-                ],
-              ),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(left: 20, top: 39.73),
-                  child: Row(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.only(left: 20, top: 69.97),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const SizedBox(
@@ -37,7 +28,7 @@ class Dashboard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              'Selamat Pagi',
+                              'Selamat Pagi,',
                               style: TextStyle(
                                 fontFamily: 'Lato',
                                 fontSize: 10,
@@ -65,36 +56,64 @@ class Dashboard extends StatelessWidget {
                           backgroundImage: NetworkImage(
                               'https://api.unira.ac.id/img/profil/mhs/8e35dc4c9c4b61b341800d1ef1f10eba.jpg'),
                         ),
-                      )
+                      ),
                     ],
                   ),
-                ),
-                const Stack(
-                  fit: StackFit.loose,
-                  children: [
-                    Row(
-                      children: [Text('asdfsf')],
-                    ),
-                    SizedBox(
-                      // width mengikuti dimensi layar
-                      width: double.infinity,
-                      height: 470.0,
-                      child: DecoratedBox(
-                        // buat melengkungkan sisi atas
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(40.0),
-                            topRight: Radius.circular(40.0),
-                          ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 19),
+                    child: Column(
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                backgroundColor: Colors.white,
+                                // minimumSize: const Size(40, 20),
+                              ),
+                              child: const Text('Berita',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontFamily: 'Lato',
+                                    fontSize: 10,
+                                  )),
+                            ),
+                          ],
                         ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Stack(
+              fit: StackFit.loose,
+              children: [
+                Row(
+                  children: [Text('asdfsf')],
+                ),
+                SizedBox(
+                  // width mengikuti dimensi layar
+                  width: double.infinity,
+                  height: 405.0,
+                  child: DecoratedBox(
+                    // buat melengkungkan sisi atas
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40.0),
+                        topRight: Radius.circular(40.0),
                       ),
                     ),
-                  ],
+                  ),
                 ),
               ],
             ),
-          ),
+          ],
         ),
         floatingActionButton: const FloatingButton(),
         bottomNavigationBar: const NavigationButtomBar(),
@@ -141,16 +160,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
   Widget build(BuildContext context) {
     return BottomAppBar(
       notchMargin: 8,
-      child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(118, 118, 118, 0),
-              blurRadius: 3,
-            ),
-          ],
-        ),
+      child: SizedBox(
         height: 65,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -158,7 +168,8 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
             Row(
               children: <Widget>[
                 MaterialButton(
-                  padding: const EdgeInsets.only(left: 25, right: 44),
+                  elevation: 0,
+                  // padding: const EdgeInsets.only(left: 25),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -181,7 +192,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
                   ),
                 ),
                 MaterialButton(
-                  padding: const EdgeInsets.only(left: 25, right: 47),
+                  // padding: const EdgeInsets.only(left: 44, right: 47),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -208,7 +219,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
             Row(
               children: <Widget>[
                 MaterialButton(
-                  padding: const EdgeInsets.only(left: 40, right: 26),
+                  // padding: const EdgeInsets.only(left: 40, right: 26),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -225,7 +236,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
                   ),
                 ),
                 MaterialButton(
-                  padding: const EdgeInsets.only(left: 32, right: 26),
+                  // padding: const EdgeInsets.only(left: 32, right: 26),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,

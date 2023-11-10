@@ -1,4 +1,4 @@
-import 'package:example_app/pages/splash.dart';
+import 'package:example_app/pages/authentication.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'UNIRA One Hand',
-      home: Splash(),
+      home: Authentication(),
     );
   }
 }
