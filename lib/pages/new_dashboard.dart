@@ -9,114 +9,127 @@ class Dashboard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.only(left: 20, top: 69.97),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const SizedBox(
-                          height: 35,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text(
-                                'Selamat Pagi,',
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                  fontSize: 10,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(top: 5),
-                                child: Text(
-                                  'Khana Zulfana Imam',
+        body: SafeArea(
+          child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.fromRGBO(47, 87, 139, 1),
+                  Color.fromRGBO(3, 5, 88, 1)
+                ],
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(left: 20, top: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            height: 35,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'Selamat Pagi,',
                                   style: TextStyle(
                                     fontFamily: 'Lato',
-                                    fontSize: 15,
+                                    fontSize: 10,
                                     color: Colors.white,
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.only(right: 21),
-                          child: const CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                'https://api.unira.ac.id/img/profil/mhs/8e35dc4c9c4b61b341800d1ef1f10eba.jpg'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 19),
-                      child: Column(
-                        children: [
-                          Row(children: [
-                            // buat carousel
-                          ]),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  backgroundColor: Colors.white,
-                                  // minimumSize: const Size(40, 20),
-                                ),
-                                child: const Text('Berita',
+                                Padding(
+                                  padding: EdgeInsets.only(top: 5),
+                                  child: Text(
+                                    'Khana Zulfana Imam',
                                     style: TextStyle(
-                                      color: Colors.black,
                                       fontFamily: 'Lato',
-                                      fontSize: 10,
-                                    )),
-                              ),
-                            ],
+                                      fontSize: 15,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            padding: const EdgeInsets.only(right: 21),
+                            child: const CircleAvatar(
+                              backgroundImage: NetworkImage(
+                                  'https://api.unira.ac.id/img/profil/mhs/8e35dc4c9c4b61b341800d1ef1f10eba.jpg'),
+                            ),
                           ),
                         ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 19),
+                        child: Container(
+                          width: 220,
+                          height: 178,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Berita',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'Lato',
+                                  fontSize: 10,
+                                )),
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              backgroundColor: Colors.white,
+                              minimumSize: const Size(40, 20),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const Stack(
+                  fit: StackFit.loose,
+                  children: [
+                    Row(
+                      children: [Text('asdfsf')],
+                    ),
+                    SizedBox(
+                      // width mengikuti dimensi layar
+                      width: double.infinity,
+                      height: 470.0,
+                      child: DecoratedBox(
+                        // buat melengkungkan sisi atas
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(40.0),
+                            topRight: Radius.circular(40.0),
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
-              const Stack(
-                fit: StackFit.loose,
-                children: [
-                  Row(
-                    children: [Text('asdfsf')],
-                  ),
-                  SizedBox(
-                    // width mengikuti dimensi layar
-                    width: double.infinity,
-                    height: 405.0,
-                    child: DecoratedBox(
-                      // buat melengkungkan sisi atas
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40.0),
-                          topRight: Radius.circular(40.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         floatingActionButton: const FloatingButton(),
@@ -164,7 +177,16 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
   Widget build(BuildContext context) {
     return BottomAppBar(
       notchMargin: 8,
-      child: SizedBox(
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromRGBO(118, 118, 118, 0),
+              blurRadius: 3,
+            ),
+          ],
+        ),
         height: 65,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -172,8 +194,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
             Row(
               children: <Widget>[
                 MaterialButton(
-                  elevation: 0,
-                  // padding: const EdgeInsets.only(left: 25),
+                  padding: const EdgeInsets.only(left: 25, right: 44),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -196,7 +217,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
                   ),
                 ),
                 MaterialButton(
-                  // padding: const EdgeInsets.only(left: 44, right: 47),
+                  padding: const EdgeInsets.only(left: 25, right: 47),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -223,7 +244,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
             Row(
               children: <Widget>[
                 MaterialButton(
-                  // padding: const EdgeInsets.only(left: 40, right: 26),
+                  padding: const EdgeInsets.only(left: 40, right: 26),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -240,7 +261,7 @@ class _NavigationButtomBarState extends State<NavigationButtomBar> {
                   ),
                 ),
                 MaterialButton(
-                  // padding: const EdgeInsets.only(left: 32, right: 26),
+                  padding: const EdgeInsets.only(left: 32, right: 26),
                   onPressed: () {},
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
